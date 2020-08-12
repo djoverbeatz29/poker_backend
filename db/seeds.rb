@@ -6,29 +6,36 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Player.destroy_all
+
 players = Player.create([
     {
         username: 'philivey',
+        password: 'password',
         first_name: 'Phil',
         last_name: 'Ivey',
         email: 'philivey@gmail.com'
     }, {
         username: 'danielnegreanu',
+        password: 'password',
         first_name: 'Daniel',
         last_name: 'Negreanu',
         email: 'philivey@gmail.com'
     }, {
         username: 'chrismoneymaker',
+        password: 'password',
         first_name: 'Chris',
         last_name: 'Moneymaker',
         email: 'chrismoneymaker@gmail.com'
     }, {
         username: 'philhellmuth',
+        password: 'password',
         first_name: 'Phil',
         last_name: 'Hellmuth',
         email: 'philhellmuth@gmail.com'
     }, {
         username: 'doylebrunson',
+        password: 'password',
         first_name: 'Doyle',
         last_name: 'Brunson',
         email: 'doylebrunson@gmail.com'
