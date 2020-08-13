@@ -11,26 +11,31 @@ players = Player.create([
         username: 'philivey',
         first_name: 'Phil',
         last_name: 'Ivey',
-        email: 'philivey@gmail.com'
+        email: 'philivey@gmail.com',
+        password: 'password'
     }, {
         username: 'danielnegreanu',
         first_name: 'Daniel',
         last_name: 'Negreanu',
-        email: 'philivey@gmail.com'
+        email: 'danielnegreanuy@gmail.com',
+        password: 'password'
     }, {
         username: 'chrismoneymaker',
         first_name: 'Chris',
         last_name: 'Moneymaker',
-        email: 'chrismoneymaker@gmail.com'
+        email: 'chrismoneymaker@gmail.com',
+        password: 'password'
     }, {
         username: 'philhellmuth',
         first_name: 'Phil',
         last_name: 'Hellmuth',
-        email: 'philhellmuth@gmail.com'
+        email: 'philhellmuth@gmail.com',
+        password: 'password'
     }, {
         username: 'doylebrunson',
         first_name: 'Doyle',
         last_name: 'Brunson',
-        email: 'doylebrunson@gmail.com'
+        email: 'doylebrunson@gmail.com',
+        password: 'password'
     }
 ])

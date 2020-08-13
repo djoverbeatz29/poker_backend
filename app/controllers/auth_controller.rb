@@ -10,14 +10,14 @@ class AuthController < ApplicationController
     end
 
     def login
-        byebug
         player = Player.find_by(username: params[:username])
         if player && player.authenticate(params[:password_digest])
             payload = {player_id: player.id}
-            token = encode_token(payload)
+            string = "#OmEUsEGRED0"
+            token = JWT.encode(payload, string, 'HS256')
             render json: {player: player, jwt: token}
         else
-            render json: {errors: player.errors.full_messages}, status: :not_acceptable
+            render json: {message: "Invalid credentials."}, status: 401
         end
     end
 
