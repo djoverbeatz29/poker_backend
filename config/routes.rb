@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :players
 
   post '/login', to: 'auth#login'
-  get '/auto_login', to: 'auth#auto_login'
-  get '/player_is_authenticated', to: 'auth#player_is_authenticated'
+  get '/player', to: 'auth#show'
   
 end
