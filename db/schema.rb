@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_08_07_153959) do
 
   create_table "games", force: :cascade do |t|
-    t.float "min_bet"
+    t.float "min_bet", default: 5.0
     t.integer "number_of_players"
     t.integer "winner_id"
     t.integer "button_id", default: 0
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2020_08_07_153959) do
 
   create_table "players", force: :cascade do |t|
     t.float "account_balance", default: 1000.0
-    t.float "game_balance", default: 100.0
-    t.float "amount_bet", default: 100.0
+    t.float "game_balance", default: 500.0
+    t.float "amount_bet", default: 0.0
     t.string "username"
     t.string "first_name"
     t.string "last_name"
