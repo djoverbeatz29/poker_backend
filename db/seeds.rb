@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Player.destroy_all
+Game.destroy_all
+PlayerGame.destroy_all
+Round.destroy_all
 
 players = Player.create([
     {
@@ -41,3 +44,5 @@ players = Player.create([
         email: 'doylebrunson@gmail.com',
     }
 ])
+
+game = Game.create(number_of_players: 2, min_bet: 5.00)

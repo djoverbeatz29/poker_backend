@@ -1,9 +1,7 @@
 class CreateRounds < ActiveRecord::Migration[6.0]
   def change
     create_table :rounds do |t|
-      t.string :current_player_id
-      t.float :min_bet
-      t.float :max_bet
+      t.integer :current_player_id
       t.string :step
       t.string :avail_players
       t.float :pool

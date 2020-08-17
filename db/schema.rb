@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_12_223922) do
+ActiveRecord::Schema.define(version: 2020_08_07_153959) do
 
   create_table "games", force: :cascade do |t|
-    t.string "winner"
-    t.float "pot"
+    t.float "min_bet"
+    t.integer "number_of_players"
+    t.integer "winner_id"
+    t.integer "button_id", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -42,9 +44,7 @@ ActiveRecord::Schema.define(version: 2020_08_12_223922) do
   end
 
   create_table "rounds", force: :cascade do |t|
-    t.string "current_player_id"
-    t.float "min_bet"
-    t.float "max_bet"
+    t.integer "current_player_id"
     t.string "step"
     t.string "avail_players"
     t.float "pool"
