@@ -3,8 +3,8 @@ A simple React-based app, with a Ruby on Rails backend, that allows a player to 
 
 # Database Schema
 
-Player
-Attributes:
+## Player  
+## Attributes:
   - username
   - first_name
   - last_name
@@ -13,29 +13,24 @@ Attributes:
   - account_balance
   - game_balance
   - amount_bet
-	
-Has many: PlayerGames
+Has many: PlayerGames  
 Has many: Games, through: PlayerGames
 
-
-Game
-Attributes:
+## Game  
+## Attributes:
   - min_bet
   - number_of_players
   - winner_id
   - button_id
-  
-Has many: PlayerGames
-Has many: Players, through: PlayerGames
-Has many: Rounds
+Has many: PlayerGames  
+Has many: Players, through: PlayerGames  
+Has many: Rounds  
 
-
-Round
-Attributes:
+## Round  
+## Attributes:
   - current_player_id
   - step
   - avail_players
   - float pool
   - boolean is_over
-	
 Belongs to: Game
