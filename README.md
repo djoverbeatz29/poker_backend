@@ -13,8 +13,9 @@ A simple React-based app, with a Ruby on Rails backend, that allows a player to 
   - account_balance
   - game_balance
   - amount_bet
-Has many: PlayerGames  
-Has many: Games, through: PlayerGames
+## Has many:
+  - PlayerGames  
+  - Games, through: PlayerGames
 
 ## Game  
 ## Attributes:
@@ -22,15 +23,17 @@ Has many: Games, through: PlayerGames
   - number_of_players
   - winner_id
   - button_id
-Has many: PlayerGames  
-Has many: Players, through: PlayerGames  
-Has many: Rounds  
+## Has many:
+  - PlayerGames  
+  - Players, through: PlayerGames  
+  - Rounds  
 
 ## Round  
-## Attributes:
+### Attributes:
   - current_player_id
   - step
   - avail_players
   - float pool
   - boolean is_over
-Belongs to: Game
+## Belongs to:
+  - Game
