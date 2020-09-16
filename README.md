@@ -27,8 +27,9 @@ Has many: Rounds
 
 Round
 Attributes:
-    - current_player_id
-    - step
-    - avail_players
-    - float pool
-    - boolean is_over
+  - current_player_id
+  - step
+  - avail_players
+  - float pool
+  - boolean is_over
+Belongs to: Game
