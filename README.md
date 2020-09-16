@@ -1,24 +1,34 @@
-# README
+# REACT HOLD EM
+A simple React-based app, with a Ruby on Rails backend, that allows a player to log in and out and play Hold 'Em against bots.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Database Schema
+Player
+Attributes:
+  - username
+  - first_name
+  - last_name
+  - password
+  - email
+  - account_balance
+  - game_balance
+  - amount_bet
+Has many: PlayerGames
+Has many: Games, through: PlayerGames
 
-Things you may want to cover:
+Game
+Attributes:
+  - min_bet
+  - number_of_players
+  - winner_id
+  - button_id
+Has many: PlayerGames
+Has many: Players, through: PlayerGames
+Has many: Rounds
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Round
+Attributes:
+    - current_player_id
+    - step
+    - avail_players
+    - float pool
+    - boolean is_over
