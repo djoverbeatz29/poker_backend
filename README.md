@@ -2,8 +2,8 @@
 A simple React-based app, with a Ruby on Rails backend, that allows a player to log in and out and play Hold 'Em against bots.
 
 # Database Schema
-Player
 
+Player
 Attributes:
   - username
   - first_name
@@ -24,7 +24,7 @@ Attributes:
   - number_of_players
   - winner_id
   - button_id
-
+  
 Has many: PlayerGames
 Has many: Players, through: PlayerGames
 Has many: Rounds
